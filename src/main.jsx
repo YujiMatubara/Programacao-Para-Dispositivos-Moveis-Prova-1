@@ -3,8 +3,22 @@ import { createRoot } from 'react-dom/client'
 import App from './components/App'
 import './styles.css'
 
+import { PRIMEUI_LICENSE } from './utils/chaves'
+
+import { PrimeReactProvider } from '@primereact/core'
+import Aura from '@primeuix/themes/aura'
+
+const primereact = {
+    theme: {
+        preset: Aura
+    },
+    license: PRIMEUI_LICENSE
+}
+
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+    <StrictMode>
+        <PrimeReactProvider {...primereact}>
+            <App />
+        </PrimeReactProvider>
+    </StrictMode>,
 )

@@ -1,4 +1,5 @@
 import React from 'react'
+import { MapMarker } from '@primeicons/react'
 
 const App = () => {
     const estiloSubtitulo = {
@@ -14,11 +15,12 @@ const App = () => {
     return (
         <div>
             <h1 className="titulo">
+                <MapMarker size={16} />
                 RolêRadar
             </h1>
-            <p1 style={estiloSubtitulo}>
+            <p style={estiloSubtitulo}>
                 Descubra o que existe perto de você
-            </p1>
+            </p>
 
             <footer>
                 RolêRadar © {obterAno()}
